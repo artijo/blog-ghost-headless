@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lineseed.className}>
+      <body className={`min-h-screen bg-slate-100 antialiased ${lineseed.className}`}>
         <Header />
         {children}
         <Script id='nav' src='/js/nav.js' />

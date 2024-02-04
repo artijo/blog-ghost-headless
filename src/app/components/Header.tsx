@@ -23,8 +23,7 @@ export default async function Header() {
             href='/'
             aria-label='Brand'
           >
-            <h1>Logo</h1>
-            <h2>Site_title</h2>
+            <h1 className='w-max'>ARTIJO • BLOG</h1>
           </Link>
           <button
             id='navtoggle'
