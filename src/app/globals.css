@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: var(--font-clulabhornlikit);
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-lineseed);
+}
+
 @media (max-width: 767px) {
   .nav-open #nav {
     max-height: 100vh;

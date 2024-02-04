@@ -1,26 +1,38 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
 import "./globals.css";
 import Header from "./components/Header";
 import Script from 'next/script';
+import localFont from 'next/font/local'
 
 const lineseed = localFont({
-  src: [
-    {
-      path: './fonts/LineSeed/lineseedsansth_rg-webfont.woff2',
-      weight: "400",
-    },
-    {
-      path: './fonts/LineSeed/lineseedsansth_bd-webfont.woff2',
-      weight: "700",
-    },
-    {
-      path: './fonts/LineSeed/lineseedsansth_th-webfont.woff2',
-      weight: "300",
-    }
-  ]
-}
-);
+    variable: '--font-lineseed',
+    src: [
+      {
+        path: './fonts/LineSeed/lineseedsansth_rg-webfont.woff2',
+        weight: "400",
+      },
+      {
+        path: './fonts/LineSeed/lineseedsansth_bd-webfont.woff2',
+        weight: "700",
+      },
+    ]
+  }
+  );
+  
+  const clulabhornlikit = localFont({
+    variable: '--font-clulabhornlikit',
+    src: [
+      {
+        path: './fonts/chulabhornlikit/chulabhornlikittext-regular.woff2',
+        weight: "400",
+      },
+      {
+        path: './fonts/chulabhornlikit/chulabhornlikittext-bold.woff2',
+        weight: "700",
+      }
+    ],
+  }
+  );
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`min-h-screen bg-slate-100 antialiased ${lineseed.className}`}>
+    <html lang="th">
+      <body className={`min-h-screen bg-slate-100 antialiased ${lineseed.variable} ${clulabhornlikit.variable}`}>
         <Header />
         {children}
         <Script id='nav' src='/js/nav.js' />
