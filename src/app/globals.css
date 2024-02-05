@@ -51,6 +51,11 @@ figure {
   }
 }
 
+iframe {
+  width: 100%;
+  border: none;
+}
+
 @media (max-width: 767px) {
   .nav-open #nav {
     max-height: 100vh;
