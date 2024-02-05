@@ -13,7 +13,13 @@ const nextConfig = {
             hostname: 'ghost.artijo.com',
             port: '',
             pathname: '**',
-          }
+          },
+          {
+            protocol: 'https',
+            hostname: 'images.unsplash.com',
+            port: '',
+            pathname: '**',
+          },
         ],
       },
     
