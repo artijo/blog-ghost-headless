@@ -1,5 +1,3 @@
-import { env } from "process";
-
 const url = process.env.GHOST_API_URL || "https://ghost.artijo.com/ghost/api/content/";
 
 export const getPosts = async (limit:Number = 9) => {
