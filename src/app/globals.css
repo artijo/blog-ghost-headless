@@ -58,18 +58,21 @@ iframe {
   width: 100%;
   border: none;
   overflow-wrap: break-word;
+  width: 100%;
 }
 
 em {
   font-family: var(--font-lineseed);
   font-weight: 700;
   overflow-wrap: break-word;
+  width: 100%;
 }
 
 cite {
   font-family: var(--font-lineseed);
   font-weight: 700;
   overflow-wrap: break-word;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
