@@ -47,11 +47,11 @@ figure {
   margin: 0;
   width: 100%;
   overflow-wrap: break-word;
-  figcaption {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    text-align: center;
-  }
+}
+figcaption {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
 }
 
 iframe {

@@ -57,6 +57,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
         post.posts.map((post: any) => (
             <div key={post.id} className="flex flex-col items-center">
                 <div
+                className="prose dark:prose-dark max-w-none w-full"
                 dangerouslySetInnerHTML={{
                     __html: post.html
                 }}
