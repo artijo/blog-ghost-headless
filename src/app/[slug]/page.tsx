@@ -1,11 +1,16 @@
 import { getPost } from "../helper";
 import Image from "next/image";
-
+import Head from 'next/head'
 
 export default async function Post({ params }: { params: { slug: string } }) {
-    const post = await getPost(params.slug);
+  const post = await getPost(params.slug);
   return (
-<main className='lg:pt-[150px pt-[90px] md:pt-[120px]'>
+  <>
+  <Head>
+    <title>{post.posts[0].title}</title>
+    <meta name="description" content={post.posts[0].excerpt} />
+  </Head>
+    <main className='lg:pt-[150px pt-[90px] md:pt-[120px]'>
 <div className='mx-auto max-w-4xl px-5'>
 {
         post.posts.map((post: any) => (
@@ -27,5 +32,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
       }
 </div>
 </main>
+</>
   );
 }
