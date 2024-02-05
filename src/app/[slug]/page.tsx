@@ -1,15 +1,26 @@
 import { getPost } from "../helper";
 import Image from "next/image";
-import Head from 'next/head'
+import type { Metadata, ResolvingMetadata } from 'next'
+
+type Props = {
+  params: {
+    slug: string;
+  }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const post = await getPost(params.slug);
+  return {
+    title: post.posts[0].title,
+    description: post.posts[0].excerpt,
+    image: post.posts[0].feature_image,
+  } as Metadata;
+}
 
 export default async function Post({ params }: { params: { slug: string } }) {
   const post = await getPost(params.slug);
   return (
   <>
-  <Head>
-    <title>{post.posts[0].title}</title>
-    <meta name="description" content={post.posts[0].excerpt} />
-  </Head>
     <main className='lg:pt-[150px pt-[90px] md:pt-[120px]'>
 <div className='mx-auto max-w-4xl px-5'>
 {

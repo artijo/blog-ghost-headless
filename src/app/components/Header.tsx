@@ -6,9 +6,8 @@ import { Menu, X } from 'lucide-react';
 export default async function Header() {
  
   const nav = [
-    { name: 'Example', link: '/example' },
-    { name: 'Blog', link: '/blog' },
-    { name: 'About', link: '/about' },
+    { name: 'Privacy Policy', link: 'https://privacy.artijo.com' },
+    { name: 'About', link: 'https://about.artijo.com' },
   ];
 
   return (
