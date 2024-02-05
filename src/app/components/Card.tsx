@@ -6,7 +6,7 @@ export default function Card({ slug, feature_image, title}: { slug: string, feat
 
   return (
     <article
-      className='max-w-[480px] overflow-hidden rounded-md bg-white shadow-sm dark:bg-slate-800'
+      className='overflow-hidden rounded-md bg-white shadow-sm dark:bg-slate-800 mx-auto w-full'
     //   key={post.id}
     >
       <Link href={`/${slug}`} prefetch={true}>
