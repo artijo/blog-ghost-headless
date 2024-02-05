@@ -9,3 +9,8 @@ export const getPost = async (slug: string) => {
   const response = await fetch(url + "posts/slug/" + slug + "/?key=" + process.env.GHOST_API_KEY + "&include=tags");
   return response.json();
 };
+
+export const getPostsByPage = async (page: Number = 1, limit:Number = 9) => {
+  const response = await fetch(url + "posts/?key=" + process.env.GHOST_API_KEY + "&limit=" + limit + "&page=" + page + "&include=tags");
+  return response.json();
+};
