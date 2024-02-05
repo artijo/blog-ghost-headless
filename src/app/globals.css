@@ -57,6 +57,19 @@ figure {
 iframe {
   width: 100%;
   border: none;
+  overflow-wrap: break-word;
+}
+
+em {
+  font-family: var(--font-lineseed);
+  font-weight: 700;
+  overflow-wrap: break-word;
+}
+
+cite {
+  font-family: var(--font-lineseed);
+  font-weight: 700;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 767px) {
