@@ -19,7 +19,7 @@ export default function Card({ slug, feature_image, title}: { slug: string, feat
         />
       </Link>
       <div className='p-4'>
-        <h3 className='mb-3 text-xl font-bold drak:text-white'>
+        <h3 className='mb-3 text-xl font-bold dark:text-white'>
           <Link href={`/${slug}`} prefetch={true}>{title}</Link>
         </h3>
         {/* <div className='flex items-center gap-2 text-gray-600 dark:text-gray-400'>
