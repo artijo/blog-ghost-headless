@@ -7,7 +7,7 @@ type PageProps = {
       }
     };
 
-export default async function Page({ params }: PageProps) {
+export default function Page({ params }: PageProps) {
   return (
     <main className="lg:pt-[100px] pt-[90px] md:pt-[120px] sm:px-[16px] pb-[90px]">
       <h2 className="text-3xl font-bold text-center pb-[16px]">บันทึกของไอ้อาร์ต</h2>
