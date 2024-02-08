@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link';
 import Nav from '@/app/components/Nav';
 import { Menu, X } from 'lucide-react';

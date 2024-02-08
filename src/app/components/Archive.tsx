@@ -1,3 +1,5 @@
+'use client'
+import { useState, useEffect } from "react";
 import {  getPostsByPage } from "../helper";
 import Card from "./Card";
 import Pagination from "./Pagination";
@@ -8,8 +10,20 @@ type PageProps = {
       }
     };
 
-export default async function Archive({ params }: PageProps) {
-const posts = await getPostsByPage(Number(params.page));
+const initPosts = async (page:Number) => {
+  const posts = await getPostsByPage(page);
+  return posts;
+};
+
+export default function Archive({ params }: PageProps) {
+// const posts = await getPostsByPage(Number(params.page));
+const [posts, setPosts] = useState({posts: [], meta: {pagination: { page: 1, limit: 1, total: 1, next: null, previous: null, pages: 1}}});
+useEffect(() => {
+  initPosts(Number(params.page)).then((posts) => {
+    setPosts(posts);
+  })
+}
+, [params.page]);
   return (
    <>
       <div className="px-[16px] mx-auto grid  max-w-[1120px] grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">

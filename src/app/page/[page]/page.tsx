@@ -1,3 +1,4 @@
+'use client'
 import Archive from "@/app/components/Archive";
 
 type PageProps = {
