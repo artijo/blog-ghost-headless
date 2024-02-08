@@ -2,6 +2,7 @@ import { getPost } from "../helper";
 import Image from "next/image";
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Camera } from 'lucide-react';
+import { notFound } from "next/navigation";
 
 type Props = {
   params: {
@@ -13,13 +14,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPost(params.slug);
   return {
     title: post.posts[0].title,
-    description: post.posts[0].excerpt,
     image: post.posts[0].feature_image,
   } as Metadata;
 }
 
 export default async function Post({ params }: { params: { slug: string } }) {
+  
   const post = await getPost(params.slug);
+  
   return (
   <>
     <main className='lg:pt-[150px pt-[90px] md:pt-[120px]'>
