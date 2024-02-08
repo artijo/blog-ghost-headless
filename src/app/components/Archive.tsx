@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import {  getPostsByPage } from "../helper";
 import Card from "./Card";
 import Pagination from "./Pagination";
+import { notFound } from "next/navigation";
 
 type PageProps = {
     params: {
@@ -12,6 +13,9 @@ type PageProps = {
 
 const initPosts = async (page:Number) => {
   const posts = await getPostsByPage(page);
+  if (posts.posts.length === 0) {
+    return notFound();
+  }
   return posts;
 };
 
