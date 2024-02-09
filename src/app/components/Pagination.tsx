@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 
 export default function Pagination({page , limit , total , next , previous , pages}: any) {
