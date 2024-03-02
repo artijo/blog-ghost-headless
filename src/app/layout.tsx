@@ -46,6 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th">
+      <Script id="cf-nalytics" defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "51cf8f0dbaf24352b7c100ce69ec7414"}'></Script>
       <body className={`min-h-screen bg-slate-100 antialiased ${lineseed.variable} ${clulabhornlikit.variable}`}>
         <Header />
         {children}
